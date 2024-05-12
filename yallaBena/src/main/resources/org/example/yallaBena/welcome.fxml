@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.yallaBena.welcomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <BorderPane fx:id="welcomeScene" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #FFEC02;">
+      <left>
+         <AnchorPane prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+               <ImageView fitHeight="500.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../../../../../../../../My%20Data/Yosra/OOP%20Sama/yallaBena.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </AnchorPane>
+      </left>
+      <right>
+         <AnchorPane prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+               <Label layoutX="52.0" text="Yalla Bena">
+                  <font>
+                     <Font name="System Bold" size="64.0" />
+                  </font>
+               </Label>
+               <Label layoutX="125.0" layoutY="109.0" text="User Name">
+                  <font>
+                     <Font name="System Bold" size="24.0" />
+                  </font>
+               </Label>
+               <Label layoutX="132.0" layoutY="204.0" text="Password">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="txtUserName" layoutX="113.0" layoutY="154.0" />
+               <Button defaultButton="true" layoutX="152.0" layoutY="308.0" mnemonicParsing="false" onAction="#onLoginClick" text="Login">
+                  <font>
+                     <Font name="System Bold" size="24.0" />
+                  </font>
+               </Button>
+               <Button layoutX="156.0" layoutY="390.0" mnemonicParsing="false" onAction="#onRegisterClick" text="Register">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Button>
+               <Label fx:id="lblError" disable="true" layoutX="84.0" layoutY="429.0" text="Invalid User Name or Password" textFill="#c31919" visible="false">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <PasswordField fx:id="txtPassword" layoutX="113.0" layoutY="256.0" />
+            </children>
+         </AnchorPane>
+      </right>
+   </BorderPane>
+</VBox>
